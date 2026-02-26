@@ -1,0 +1,8 @@
+{
+  "name": "Vitalis Premium Care",
+  "description": "An elegant, modern medical clinic platform featuring 3D-inspired animations, AI-powered appointment scheduling via Gemini, and a full reservation system.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
