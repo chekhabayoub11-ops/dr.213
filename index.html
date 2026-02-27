@@ -1,0 +1,210 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>عيادة الدكتور يحيى | طب وجراحة الأسنان - بن عكنون</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&family=Amiri:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
+  <style>
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #f1f5f9; }
+    ::-webkit-scrollbar-thumb { background: #3b82f6; border-radius: 4px; }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-900">
+  <!-- Navbar -->
+  <nav class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md shadow-sm py-3">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center">
+        <a href="#" class="flex items-center gap-2">
+          <div class="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center text-white font-bold text-xl shadow-lg">ي</div>
+          <span class="text-xl font-bold font-serif text-slate-900">عيادة د. يحيى</span>
+        </a>
+        <div class="hidden md:flex items-center gap-8">
+          <a href="#" class="text-slate-600 hover:text-blue-600 font-bold transition-colors">الرئيسية</a>
+          <a href="#about" class="text-slate-600 hover:text-blue-600 font-bold transition-colors">عن العيادة</a>
+          <a href="#book" class="bg-blue-600 text-white px-8 py-2.5 rounded-full hover:bg-blue-700 transition-all shadow-lg shadow-blue-200 font-bold">احجز موعدك</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="relative overflow-hidden bg-slate-50 min-h-[90vh] flex items-center pt-20">
+    <div class="absolute top-0 right-0 -mr-20 -mt-20 w-[600px] h-[600px] bg-blue-100/40 rounded-full blur-3xl animate-pulse"></div>
+    <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-[500px] h-[500px] bg-emerald-100/40 rounded-full blur-3xl"></div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-24 grid lg:grid-cols-2 gap-12 items-center">
+      <div class="space-y-8">
+        <div class="relative">
+          <span class="inline-block px-4 py-2 rounded-full bg-blue-100 text-blue-700 text-sm font-extrabold mb-4 shadow-sm">✨ العيادة المرجعية في بن عكنون</span>
+          <h1 class="text-6xl lg:text-8xl font-serif font-black text-slate-900 leading-[1.1]">
+            ابتسامة <br />
+            <span class="text-transparent bg-clip-text bg-gradient-to-l from-blue-600 to-emerald-500">تغير حياتك.</span>
+          </h1>
+          <p class="mt-6 text-xl text-slate-600 max-w-lg leading-relaxed font-medium">
+            مرحباً بكم في عيادة الدكتور يحيى. نقدم لكم رعاية استثنائية وجراحة أسنان متقدمة في قلب الجزائر العاصمة.
+          </p>
+        </div>
+        <div class="flex flex-col sm:flex-row gap-5">
+          <a href="#book" class="px-10 py-5 bg-blue-600 text-white rounded-2xl font-black text-xl hover:bg-blue-700 transition-all shadow-2xl shadow-blue-200 text-center transform hover:scale-105 active:scale-95">احجز موعدك الآن</a>
+          <a href="#about" class="px-10 py-5 bg-white text-slate-900 border-2 border-slate-200 rounded-2xl font-black text-xl hover:bg-slate-50 transition-all text-center">تعرف علينا</a>
+        </div>
+        <div class="flex items-center gap-10 pt-6">
+          <div class="text-center group">
+            <div class="text-4xl font-black text-blue-600">+12</div>
+            <div class="text-sm font-bold text-slate-500 uppercase tracking-tighter">سنة خبرة</div>
+          </div>
+          <div class="w-px h-12 bg-slate-200"></div>
+          <div class="text-center group">
+            <div class="text-4xl font-black text-blue-600">100%</div>
+            <div class="text-sm font-bold text-slate-500 uppercase tracking-tighter">نجاح العمليات</div>
+          </div>
+          <div class="w-px h-12 bg-slate-200"></div>
+          <div class="text-center group">
+            <div class="text-4xl font-black text-blue-600">5.0</div>
+            <div class="text-sm font-bold text-slate-500 uppercase tracking-tighter">تقييم ممتاز</div>
+          </div>
+        </div>
+      </div>
+      <div class="relative">
+        <img src="image/طبيب.jpg" alt="دكتور يحيى بن عيسى - طبيب أسنان جزائري" class="w-full h-auto object-cover rounded-[4rem] shadow-[0_50px_100px_-20px_rgba(0,0,0,0.25)]">
+        <div class="absolute inset-0 bg-gradient-to-t from-blue-900/80 via-transparent to-transparent flex flex-col justify-end p-10 text-white">
+          <p class="text-2xl font-black mb-1">د. يحيى بن عيسى</p>
+          <div class="flex items-center gap-2">
+            <span class="w-3 h-3 bg-emerald-400 rounded-full animate-pulse"></span>
+            <p class="text-sm font-bold text-blue-100">متاح لاستقبال الحالات الآن</p>
+          </div>
+        </div>
+        <div class="absolute -bottom-10 -right-10 bg-white p-6 rounded-[2rem] shadow-2xl z-20 flex items-center gap-4 border border-slate-50 animate-float">
+          <div class="w-16 h-16 bg-blue-600 rounded-2xl flex items-center justify-center shadow-lg shadow-blue-200">
+            <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04M12 21.355r7.143-3.141c.44-.194.857-.857.857-1.355V7.124a11.955 11.955 0 01-7.143-2.141c-.44.194-.857.857-.857 1.355v9.735c0 .498.417 1.161.857 1.355L12 21.355z"/></svg>
+          </div>
+          <div>
+            <p class="text-xs font-black text-slate-400 uppercase">الضمان الطبي</p>
+            <p class="text-lg font-black text-slate-900">أحدث التقنيات 2024</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section class="py-24 bg-slate-50" id="gallery">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-blue-600 font-bold tracking-wide uppercase">صور العيادة</h2>
+        <p class="mt-2 text-3xl leading-8 font-serif font-bold tracking-tight text-slate-900 sm:text-4xl">لمحة عن أجواء العيادة</p>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- ضع هنا مسار الصورة المحلية الموجودة على جهازك -->
+        <img src="image/عيادة داخلية.jpg" alt="عيادة داخلية" class="w-full h-64 object-cover rounded-3xl shadow-lg">
+        <!-- استبدل بدالة اسم ملف الصورة الأولى من مكتبتك -->
+        <img src="image/معدات.jpg" alt="معدات طبية" class="w-full h-64 object-cover rounded-3xl shadow-lg">
+        <!-- والصورة الثالثة -->
+        <img src="image/طبيب.jpg" alt="طبيب مع مريض" class="w-full h-64 object-cover rounded-3xl shadow-lg">
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="py-24 bg-white" id="services">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-blue-600 font-bold tracking-wide uppercase">خدماتنا المتميزة</h2>
+        <p class="mt-2 text-3xl leading-8 font-serif font-bold tracking-tight text-slate-900 sm:text-4xl">رعاية شاملة لابتسامة مثالية</p>
+        <p class="mt-4 max-w-2xl text-xl text-slate-500 lg:mx-auto">نستخدم أحدث التقنيات العالمية في جراحة وزراعة الأسنان لضمان أفضل النتائج لمرضانا في بن عكنون.</p>
+      </div>
+      <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
+        <div class="relative group p-8 bg-slate-50 rounded-3xl border border-slate-100 transition-all hover:shadow-2xl hover:-translate-y-2">
+          <img src="image/زراعة.jpg" alt="زرع أسنان" class="absolute -top-4 right-8 h-14 w-14 rounded-2xl object-cover shadow-lg group-hover:scale-110 transition-transform">
+          <h3 class="mt-6 text-xl font-bold text-slate-900">زراعة الأسنان</h3>
+          <p class="mt-2 text-slate-600 leading-relaxed">تعويض الأسنان المفقودة بأحدث التقنيات الألمانية وبنتائج تدوم طويلاً.</p>
+        </div>
+        <div class="relative group p-8 bg-slate-50 rounded-3xl border border-slate-100 transition-all hover:shadow-2xl hover:-translate-y-2">
+          <img src="image/الفكين.jpg" alt="جراحة الفم والفكين" class="absolute -top-4 right-8 h-14 w-14 rounded-2xl object-cover shadow-lg group-hover:scale-110 transition-transform">
+          <h3 class="mt-6 text-xl font-bold text-slate-900">جراحة الفم والفكين</h3>
+          <p class="mt-2 text-slate-600 leading-relaxed">عمليات دقيقة لعلاج مشاكل الفكين والأسنان المنطمرة باحترافية عالية.</p>
+        </div>
+        <div class="relative group p-8 bg-slate-50 rounded-3xl border border-slate-100 transition-all hover:shadow-2xl hover:-translate-y-2">
+          <img src=" alt="هوليوود سمايل" class="absolute -top-4 right-8 h-14 w-14 rounded-2xl object-cover shadow-lg group-hover:scale-110 transition-transform">
+          <h3 class="mt-6 text-xl font-bold text-slate-900">هوليوود سمايل</h3>
+          <p class="mt-2 text-slate-600 leading-relaxed">تصميم ابتسامة رقمية تتناسب مع ملامح وجهك لتعطيك الثقة الكاملة.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="py-24 bg-white overflow-hidden" id="about">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+        <div class="relative">
+          <div class="absolute -top-10 -right-10 w-64 h-64 bg-blue-50 rounded-full blur-3xl opacity-50"></div>
+          <img src="image/طبيب.jpg" alt="الدكتور يحيى - جراح أسنان بالجزائر" class="relative z-10 w-full rounded-[3rem] shadow-2xl transform hover:scale-[1.02] transition-transform duration-500 border-4 border-slate-50 object-cover">
+        </div>
+        <div class="space-y-8">
+          <div>
+            <h2 class="text-blue-600 font-bold tracking-wide uppercase">أخصائي جراحة الفم</h2>
+            <p class="mt-2 text-4xl leading-10 font-serif font-bold text-slate-900">الدكتور يحيى بن عيسى</p>
+          </div>
+          <p class="text-xl text-slate-600 leading-relaxed">بخبرة تمتد لأكثر من 12 عاماً في أرقى العيادات والمستشفيات، يكرس الدكتور يحيى جهوده لتقديم أحدث ما توصل إليه علم طب وجراحة الأسنان لمرضاه في حي بن عكنون. نؤمن بأن كل مريض يستحق ابتسامة تعكس ثقته بنفسه.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Booking simple note -->
+  <section id="book" class="py-24 bg-slate-50 min-h-screen">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-white rounded-[3.5rem] shadow-[0_50px_100px_-20px_rgba(59,130,246,0.15)] overflow-hidden border border-slate-100">
+        <div class="bg-gradient-to-br from-blue-600 to-blue-900 px-8 py-12 text-white text-center">
+          <h2 class="text-4xl font-serif font-black">نظام الحجز</h2>
+          <p class="mt-3 text-blue-100 font-medium">لحجز موعد، يرجى الاتصال على 0555 01 23 45 أو زيارة العيادة مباشرة.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-slate-900 text-white pt-20 pb-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-3 gap-12 mb-16">
+        <div class="space-y-6">
+          <div class="flex items-center gap-2">
+            <div class="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center text-xl font-bold">ي</div>
+            <span class="text-2xl font-bold font-serif">عيادة د. يحيى</span>
+          </div>
+          <p class="text-slate-400 leading-relaxed">التميز في طب الأسنان في قلب بن عكنون. نلتزم بتقديم أرقى مستويات الرعاية الصحية لمرضانا في الجزائر.</p>
+        </div>
+        <div>
+          <h4 class="font-bold mb-6 text-blue-400">روابط سريعة</h4>
+          <ul class="space-y-4 text-slate-400">
+            <li><a href="#" class="hover:text-white transition-colors">الرئيسية</a></li>
+            <li><a href="#about" class="hover:text-white transition-colors">عن الدكتور</a></li>
+            <li><a href="#book" class="hover:text-white transition-colors">حجز موعد</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold mb-6 text-blue-400">اتصل بنا</h4>
+          <ul class="space-y-4 text-slate-400">
+            <li>📍 حي بن عكنون، الجزائر العاصمة (بالقرب من ساحة بن عكنون)</li>
+            <li>☎️ <span class="font-bold">0555 01 23 45</span> <span class="text-red-400 font-bold">(طوارئ)</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-slate-800 pt-8 text-center text-slate-500 text-sm">
+        <p>© 2024 عيادة الدكتور يحيى لطب الأسنان - بن عكنون. جميع الحقوق محفوظة.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
+</body>
+</html>
