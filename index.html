@@ -1,210 +1,581 @@
-
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>عيادة الدكتور يحيى | طب وجراحة الأسنان - بن عكنون</title>
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>د. يحيى بن عيسى | جراحة وزراعة وتجميل الأسنان - بن عكنون</title>
+  <meta name="description" content="عيادة الدكتور يحيى بن عيسى لطب وجراحة الأسنان في بن عكنون، الجزائر العاصمة: زراعة الأسنان، هوليوود سمايل، التقويم الشفاف، التبييض، جراحة الفم والفكين وطب أسنان الأطفال.">
+  <meta name="theme-color" content="#F3F7F6">
+  <meta property="og:title" content="د. يحيى بن عيسى — طب وجراحة الأسنان">
+  <meta property="og:description" content="ابتسامة تُصمَّم بدقّة الجرّاح. عيادة خاصة في بن عكنون.">
+  <meta property="og:image" content="image/doctor.jpg">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&family=Amiri:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="index.css">
-  <style>
-    ::-webkit-scrollbar { width: 8px; }
-    ::-webkit-scrollbar-track { background: #f1f5f9; }
-    ::-webkit-scrollbar-thumb { background: #3b82f6; border-radius: 4px; }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;500;600;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&family=Unbounded:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+
+  <!-- Hide intro targets only while JS runs; safety net reveals everything if the intro never starts -->
+  <script>
+    document.documentElement.classList.add('js');
+    setTimeout(function () { if (!window.__introStarted) document.documentElement.classList.remove('js'); }, 3500);
+  </script>
 </head>
-<body class="bg-slate-50 text-slate-900">
-  <!-- Navbar -->
-  <nav class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md shadow-sm py-3">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between items-center">
-        <a href="#" class="flex items-center gap-2">
-          <div class="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center text-white font-bold text-xl shadow-lg">ي</div>
-          <span class="text-xl font-bold font-serif text-slate-900">عيادة د. يحيى</span>
+<body>
+  <a class="skip" href="#main">تخطَّ إلى المحتوى</a>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="progress" aria-hidden="true"><i></i></div>
+  <div class="cursor" aria-hidden="true"><span></span></div>
+  <div class="loader" aria-hidden="true">
+    <p class="loader-name" dir="ltr" lang="en">Dr. Yahia</p>
+    <p class="loader-count" dir="ltr"><span data-loader>0</span>%</p>
+  </div>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav" data-intro="nav">
+    <a href="#top" class="brand" aria-label="عيادة د. يحيى — الرئيسية">
+      <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M9 5h11a7 7 0 0 1 7 7v15H16a7 7 0 0 1-7-7z"/></svg></span>
+      <span class="brand-word" dir="ltr" lang="en">YAHIA</span>
+    </a>
+    <nav class="nav-links" aria-label="القائمة الرئيسية">
+      <a href="#top" aria-current="page">الرئيسية</a>
+      <a href="#services">الخدمات</a>
+      <a href="#doctor">الطبيب</a>
+      <a href="#team">الفريق</a>
+      <a href="#tour">العيادة</a>
+      <a href="#faq">أسئلة</a>
+      <a href="#book">الحجز</a>
+    </nav>
+    <div class="nav-actions">
+      <a class="round" href="https://wa.me/213555012345" target="_blank" rel="noopener" aria-label="واتساب">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 20.5l1.3-4.2A8.5 8.5 0 1 1 8 19.4z"/><path d="M9 8.6c0 3.4 2.9 6.4 6.4 6.4l1.1-1.6-2-1-1 .8a4.5 4.5 0 0 1-2.8-2.8l.8-1-1-2z"/></svg>
+      </a>
+      <a class="round" href="tel:+213555012345" aria-label="اتصل بالعيادة">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>
+      </a>
+      <a class="round hide-sm" href="#map" aria-label="موقع العيادة">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+      </a>
+      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="فتح القائمة">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+  <div class="mobile-menu" id="mobile-menu" hidden>
+    <a href="#services">الخدمات</a>
+    <a href="#doctor">الطبيب</a>
+    <a href="#team">الفريق</a>
+    <a href="#tour">العيادة</a>
+    <a href="#faq">أسئلة شائعة</a>
+    <a href="#book">الحجز</a>
+    <a href="tel:+213555012345" dir="ltr">0555 01 23 45</a>
+  </div>
+
+  <main id="main">
+    <!-- ============ HERO: Grid Dive — cards fly through 3D depth, steered by the cursor ============ -->
+    <section class="dive" id="top" aria-labelledby="hero-title">
+      <div class="dive-stage" aria-hidden="true"><div class="dive-world"></div></div>
+      <div class="dive-glow" aria-hidden="true"></div>
+
+      <div class="dive-center">
+        <p class="eyebrow" data-intro="hud"><span class="dot" aria-hidden="true"></span>عيادة خاصة — بن عكنون، الجزائر</p>
+        <p class="dive-name" dir="ltr" lang="en" aria-hidden="true" data-split><span class="dr">Dr.</span>Yahia</p>
+        <h1 id="hero-title" class="dive-title" data-intro="hud">د. يحيى بن عيسى<span>ابتسامة تُصمَّم بدقّة الجرّاح.</span></h1>
+        <div class="hero-ctas" data-intro="hud">
+          <a href="#book" class="pill-cta" data-magnetic data-cursor="احجز"><span>احجز استشارتك</span><i aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M19 12H5m6-6-6 6 6 6"/></svg></i></a>
+          <a href="#services" class="btn-line">اكتشف الخدمات</a>
+        </div>
+      </div>
+
+      <dl class="hero-stats" data-intro="hud">
+        <div><dt>سنة خبرة</dt><dd dir="ltr">+<span data-count="12">12</span></dd></div>
+        <div><dt>خدمات متخصصة</dt><dd dir="ltr"><span data-count="8">8</span></dd></div>
+        <div><dt>تقييم المرضى</dt><dd dir="ltr"><span data-count="5" data-decimals="1">5.0</span></dd></div>
+      </dl>
+      <div class="dive-legend" data-intro="hud" aria-hidden="true">
+        <span><i class="k-diag"></i>التشخيص</span>
+        <span><i class="k-smile"></i>الابتسامة</span>
+      </div>
+    </section>
+
+    <!-- ============ MARQUEE ============ -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>زراعة الأسنان</span><i></i><span>هوليوود سمايل</span><i></i><span>التقويم الشفاف</span><i></i><span>تبييض الأسنان</span><i></i><span>جراحة الفم والفكين</span><i></i><span>علاج العصب</span><i></i><span>طب أسنان الأطفال</span><i></i><span>التيجان والتركيبات</span><i></i>
+        <span>زراعة الأسنان</span><i></i><span>هوليوود سمايل</span><i></i><span>التقويم الشفاف</span><i></i><span>تبييض الأسنان</span><i></i><span>جراحة الفم والفكين</span><i></i><span>علاج العصب</span><i></i><span>طب أسنان الأطفال</span><i></i><span>التيجان والتركيبات</span><i></i>
+      </div>
+    </div>
+
+    <!-- ============ SERVICES: scroll-driven card deck ============ -->
+    <section class="deck" id="services" aria-labelledby="services-title">
+      <div class="deck-stage">
+        <p class="deck-word" dir="ltr" lang="en" aria-hidden="true">CARE</p>
+        <header class="deck-head">
+          <p class="eyebrow"><span class="label" dir="ltr" lang="en">01 — SERVICES</span></p>
+          <h2 id="services-title" class="section-title" data-lines>خدماتنا</h2>
+        </header>
+
+        <nav class="deck-dots" aria-label="الانتقال بين الخدمات"></nav>
+
+        <div class="deck-cards">
+          <article class="svc" style="--i: 0" data-title="زراعة الأسنان">
+            <div class="svc-media"><img src="image/stock/implant.jpg" alt="زرعة سنية مع تاج خزفي" width="1800" height="2700" loading="lazy" decoding="async"></div>
+            <div class="svc-body">
+              <p class="svc-meta"><span class="label num" dir="ltr" lang="en">01 / 08</span><span class="label" dir="ltr" lang="en">IMPLANTS</span></p>
+              <h3>زراعة الأسنان</h3>
+              <p>تعويض الأسنان المفقودة بزرعات ألمانية تندمج مع العظم، لتعود إلى المضغ والابتسام بثقة وبنتائج تدوم سنوات طويلة.</p>
+              <ul class="tags"><li>زرعات ألمانية</li><li>سنّ واحد أو فكّ كامل</li></ul>
+              <a href="#book" class="pill-cta pill-cta-sm" data-service="زراعة الأسنان"><span>احجز الخدمة</span><i aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M19 12H5m6-6-6 6 6 6"/></svg></i></a>
+            </div>
+          </article>
+
+          <article class="svc" style="--i: 1" data-title="هوليوود سمايل">
+            <div class="svc-media"><img src="image/stock/smile.jpg" alt="ابتسامة بأسنان بيضاء متناسقة" width="1800" height="1200" loading="lazy" decoding="async" style="--pos: 70% 50%"></div>
+            <div class="svc-body">
+              <p class="svc-meta"><span class="label num" dir="ltr" lang="en">02 / 08</span><span class="label" dir="ltr" lang="en">SMILE DESIGN</span></p>
+              <h3>هوليوود سمايل والفينير</h3>
+              <p>تصميم رقمي للابتسامة قبل البدء، ثم قشور خزفية رقيقة تمنحك لوناً وشكلاً متناسقاً مع ملامح وجهك.</p>
+              <ul class="tags"><li>تصميم رقمي</li><li>فينير خزفي</li></ul>
+              <a href="#book" class="pill-cta pill-cta-sm" data-service="هوليوود سمايل"><span>احجز الخدمة</span><i aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M19 12H5m6-6-6 6 6 6"/></svg></i></a>
+            </div>
+          </article>
+
+          <article class="svc" style="--i: 2" data-title="التقويم">
+            <div class="svc-media"><img src="image/stock/aligner.jpg" alt="وضع مصفّف تقويم شفاف على الأسنان" width="1800" height="1200" loading="lazy" decoding="async"></div>
+            <div class="svc-body">
+              <p class="svc-meta"><span class="label num" dir="ltr" lang="en">03 / 08</span><span class="label" dir="ltr" lang="en">ORTHODONTICS</span></p>
+              <h3>التقويم الشفاف والثابت</h3>
+              <p>تصفيف الأسنان بمصفّفات شفافة لا تكاد تُرى، أو بالتقويم الثابت عند الحاجة، مع متابعة دورية لكل مرحلة.</p>
+              <ul class="tags"><li>مصفّفات شفافة</li><li>للبالغين والمراهقين</li></ul>
+              <a href="#book" class="pill-cta pill-cta-sm" data-service="التقويم"><span>احجز الخدمة</span><i aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M19 12H5m6-6-6 6 6 6"/></svg></i></a>
+            </div>
+          </article>
+
+          <article class="svc" style="--i: 3" data-title="التيجان والتركيبات">
+            <div class="svc-media"><img src="image/stock/implant-model.jpg" alt="طبيب يشرح نموذج تركيبة أسنان" width="1800" height="1350" loading="lazy" decoding="async"></div>
+            <div class="svc-body">
+              <p class="svc-meta"><span class="label num" dir="ltr" lang="en">04 / 08</span><span class="label" dir="ltr" lang="en">PROSTHETICS</span></p>
+              <h3>التيجان والتركيبات</h3>
+              <p>تيجان وجسور من الزيركون والخزف بلون أسنانك الطبيعي، تعيد للسنّ قوّته وشكله.</p>
+              <ul class="tags"><li>زيركون</li><li>جسور ثابتة</li></ul>
+              <a href="#book" class="pill-cta pill-cta-sm" data-service="التيجان والتركيبات"><span>احجز الخدمة</span><i aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M19 12H5m6-6-6 6 6 6"/></svg></i></a>
+            </div>
+          </article>
+
+          <article class="svc" style="--i: 4" data-title="تبييض الأسنان">
+            <div class="svc-media"><img src="image/stock/whitening.jpg" alt="أدوات تبييض الأسنان" width="1800" height="1286" loading="lazy" decoding="async"></div>
+            <div class="svc-body">
+              <p class="svc-meta"><span class="label num" dir="ltr" lang="en">05 / 08</span><span class="label" dir="ltr" lang="en">WHITENING</span></p>
+              <h3>تبييض الأسنان</h3>
+              <p>تبييض آمن في العيادة أو في المنزل بإشراف الطبيب، لابتسامة أكثر إشراقاً دون الإضرار بالمينا.</p>
+              <ul class="tags"><li>في العيادة</li><li>قوالب منزلية</li></ul>
+              <a href="#book" class="pill-cta pill-cta-sm" data-service="تبييض الأسنان"><span>احجز الخدمة</span><i aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M19 12H5m6-6-6 6 6 6"/></svg></i></a>
+            </div>
+          </article>
+
+          <article class="svc" style="--i: 5" data-title="جراحة الفم والفكين">
+            <div class="svc-media"><img src="image/stock/xray.jpg" alt="طبيب يفحص صور الأشعة السينية للأسنان" width="1800" height="1200" loading="lazy" decoding="async"></div>
+            <div class="svc-body">
+              <p class="svc-meta"><span class="label num" dir="ltr" lang="en">06 / 08</span><span class="label" dir="ltr" lang="en">ORAL SURGERY</span></p>
+              <h3>جراحة الفم والفكين</h3>
+              <p>خلع أضراس العقل المنطمرة وعلاج مشاكل الفكين بتخدير موضعي وتقنيات دقيقة تختصر فترة التعافي.</p>
+              <ul class="tags"><li>أضراس العقل</li><li>تشخيص بالأشعة</li></ul>
+              <a href="#book" class="pill-cta pill-cta-sm" data-service="جراحة الفم والفكين"><span>احجز الخدمة</span><i aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M19 12H5m6-6-6 6 6 6"/></svg></i></a>
+            </div>
+          </article>
+
+          <article class="svc" style="--i: 6" data-title="علاج العصب">
+            <div class="svc-media"><img src="image/stock/exam.jpg" alt="فحص الأسنان بالمرآة والأداة" width="1800" height="1350" loading="lazy" decoding="async"></div>
+            <div class="svc-body">
+              <p class="svc-meta"><span class="label num" dir="ltr" lang="en">07 / 08</span><span class="label" dir="ltr" lang="en">ENDODONTICS</span></p>
+              <h3>علاج العصب والحشوات</h3>
+              <p>إنقاذ السنّ بدل خلعه: علاج قنوات الجذر وحشوات تجميلية بلون السنّ، بأقل قدر من الألم.</p>
+              <ul class="tags"><li>علاج الجذور</li><li>حشوات تجميلية</li></ul>
+              <a href="#book" class="pill-cta pill-cta-sm" data-service="علاج العصب"><span>احجز الخدمة</span><i aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M19 12H5m6-6-6 6 6 6"/></svg></i></a>
+            </div>
+          </article>
+
+          <article class="svc" style="--i: 7" data-title="طب أسنان الأطفال">
+            <div class="svc-media"><img src="image/stock/kids.jpg" alt="طبيب يفحص أسنان طفل" width="1800" height="1198" loading="lazy" decoding="async"></div>
+            <div class="svc-body">
+              <p class="svc-meta"><span class="label num" dir="ltr" lang="en">08 / 08</span><span class="label" dir="ltr" lang="en">KIDS</span></p>
+              <h3>طب أسنان الأطفال</h3>
+              <p>زيارة هادئة ومطمئنة للصغار: فحص، وقاية بالفلورايد، وعلاج لطيف يبني علاقة إيجابية مع طبيب الأسنان.</p>
+              <ul class="tags"><li>وقاية مبكرة</li><li>تجربة مطمئنة</li></ul>
+              <a href="#book" class="pill-cta pill-cta-sm" data-service="طب أسنان الأطفال"><span>احجز الخدمة</span><i aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M19 12H5m6-6-6 6 6 6"/></svg></i></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ DOCTOR ============ -->
+    <section class="section" id="doctor" aria-labelledby="doctor-title">
+      <div class="container doctor">
+        <figure class="doctor-media reveal">
+          <img src="image/doctor.jpg" alt="الدكتور يحيى بن عيسى في عيادته" width="1067" height="1600" loading="lazy" decoding="async">
+          <figcaption><span class="label" dir="ltr" lang="en">DR. YAHIA BEN AISSA</span>أخصائي جراحة الفم والأسنان</figcaption>
+        </figure>
+        <div class="doctor-copy reveal">
+          <p class="eyebrow"><span class="label" dir="ltr" lang="en">02 — THE DOCTOR</span></p>
+          <h2 id="doctor-title" class="section-title" data-lines>طبيب يرى في كل ابتسامة <em>مشروعاً دقيقاً.</em></h2>
+          <p class="lead">بخبرة تمتد لأكثر من 12 عاماً في أرقى العيادات والمستشفيات، يكرّس الدكتور يحيى جهوده لتقديم أحدث ما توصّل إليه علم طب وجراحة الأسنان لمرضاه في بن عكنون. نؤمن بأن كل مريض يستحق ابتسامة تعكس ثقته بنفسه.</p>
+          <ul class="checks">
+            <li>تشخيص بالأشعة وخطة علاج مكتوبة قبل البدء</li>
+            <li>تعقيم صارم وأدوات أحادية الاستخدام</li>
+            <li>شرح واضح للتكلفة والمراحل دون مفاجآت</li>
+          </ul>
+          <blockquote class="quote">«كل ابتسامة قصة، ودوري أن أكتبها بدقّة.»</blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TEAM: 3D arc, doctor in the centre ============ -->
+    <!-- Staff names are not known yet: replace each <h3> role with "الاسم — الدور" and swap the stock photos for real ones. -->
+    <section class="section team" id="team" aria-labelledby="team-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow"><span class="label" dir="ltr" lang="en">03 — THE TEAM</span></p>
+          <h2 id="team-title" class="section-title" data-lines>فريق واحد، <em>ابتسامة واحدة.</em></h2>
+          <p class="lead">اسحب البطاقات أفقياً، أو استعمل الأسهم، لتتعرّف على كل فرد في رحلة علاجك.</p>
+        </header>
+        <div class="team-stage" role="region" aria-roledescription="carousel" aria-label="فريق العيادة">
+          <div class="team-ring">
+            <article class="member" tabindex="0" aria-label="الاستقبال والمواعيد">
+              <div class="member-card">
+                <img src="image/team/reception.jpg" alt="مسؤولة الاستقبال" width="1000" height="1300" loading="lazy" decoding="async" draggable="false">
+                <p class="member-role" aria-hidden="true">الاستقبال</p>
+                <div class="member-info">
+                  <span class="label" dir="ltr" lang="en">FRONT DESK</span>
+                  <h3>الاستقبال والمواعيد</h3>
+                  <p>تستقبلك، تنظّم موعدك وملفك، وتجيب عن أسئلتك قبل الزيارة وبعدها.</p>
+                </div>
+              </div>
+            </article>
+            <article class="member" tabindex="0" aria-label="طبيبة أسنان الأطفال">
+              <div class="member-card">
+                <img src="image/team/kids.jpg" alt="طبيبة أسنان الأطفال" width="1000" height="1300" loading="lazy" decoding="async" draggable="false">
+                <p class="member-role" aria-hidden="true">طب الأطفال</p>
+                <div class="member-info">
+                  <span class="label" dir="ltr" lang="en">PEDIATRIC</span>
+                  <h3>طبيبة أسنان الأطفال</h3>
+                  <p>زيارات هادئة ومطمئنة للصغار، ووقاية مبكرة تحمي أسنانهم.</p>
+                </div>
+              </div>
+            </article>
+            <article class="member" tabindex="0" aria-label="طبيب أسنان عام">
+              <div class="member-card">
+                <img src="image/team/general.jpg" alt="طبيب أسنان عام" width="1000" height="1300" loading="lazy" decoding="async" draggable="false">
+                <p class="member-role" aria-hidden="true">طب الأسنان العام</p>
+                <div class="member-info">
+                  <span class="label" dir="ltr" lang="en">GENERAL DENTISTRY</span>
+                  <h3>طبيب أسنان عام</h3>
+                  <p>الفحص الدوري، الحشوات التجميلية وعلاج التسوّس والعصب.</p>
+                </div>
+              </div>
+            </article>
+            <article class="member" tabindex="0" aria-label="مساعدة طبيب الأسنان">
+              <div class="member-card">
+                <img src="image/team/assistant.jpg" alt="مساعدة طبيب الأسنان" width="1000" height="1300" loading="lazy" decoding="async" draggable="false">
+                <p class="member-role" aria-hidden="true">المساعدة الطبية</p>
+                <div class="member-info">
+                  <span class="label" dir="ltr" lang="en">CHAIRSIDE</span>
+                  <h3>مساعدة طبيب الأسنان</h3>
+                  <p>تجهّز الأدوات وتساعد الطبيب أثناء العلاج، وتحرص على راحتك في الكرسي.</p>
+                </div>
+              </div>
+            </article>
+            <article class="member is-lead" tabindex="0" aria-label="د. يحيى بن عيسى — أخصائي جراحة الفم والأسنان">
+              <div class="member-card">
+                <img src="image/doctor.jpg" alt="الدكتور يحيى بن عيسى" width="1067" height="1600" loading="lazy" decoding="async" draggable="false">
+                <p class="member-role" aria-hidden="true">د. يحيى بن عيسى</p>
+                <div class="member-info">
+                  <span class="label" dir="ltr" lang="en">LEAD SURGEON</span>
+                  <h3>د. يحيى بن عيسى — أخصائي جراحة الفم والأسنان</h3>
+                  <p>أكثر من 12 عاماً في الزراعة والجراحة وتجميل الأسنان. يشرف على كل خطة علاج بنفسه.</p>
+                </div>
+              </div>
+            </article>
+            <article class="member" tabindex="0" aria-label="أخصائي صحة الفم والتنظيف">
+              <div class="member-card">
+                <img src="image/team/hygienist.jpg" alt="أخصائي صحة الفم" width="1000" height="1300" loading="lazy" decoding="async" draggable="false">
+                <p class="member-role" aria-hidden="true">صحة الفم</p>
+                <div class="member-info">
+                  <span class="label" dir="ltr" lang="en">HYGIENE</span>
+                  <h3>أخصائي صحة الفم والتنظيف</h3>
+                  <p>تنظيف وإزالة الجير، تلميع، ونصائح عناية يومية تحمي أسنانك بين الزيارات.</p>
+                </div>
+              </div>
+            </article>
+            <article class="member" tabindex="0" aria-label="مساعدة الجراحة والتعقيم">
+              <div class="member-card">
+                <img src="image/team/surgical.jpg" alt="مساعدة الجراحة" width="1000" height="1300" loading="lazy" decoding="async" draggable="false">
+                <p class="member-role" aria-hidden="true">مساعدة الجراحة</p>
+                <div class="member-info">
+                  <span class="label" dir="ltr" lang="en">SURGICAL ASSISTANT</span>
+                  <h3>مساعدة الجراحة والتعقيم</h3>
+                  <p>تجهّز غرفة العمليات وتضمن التعقيم الكامل قبل كل تدخّل جراحي.</p>
+                </div>
+              </div>
+            </article>
+            <article class="member" tabindex="0" aria-label="أخصائي التيجان والتركيبات">
+              <div class="member-card">
+                <img src="image/team/prostho.jpg" alt="أخصائي التركيبات" width="1000" height="1300" loading="lazy" decoding="async" draggable="false">
+                <p class="member-role" aria-hidden="true">التركيبات</p>
+                <div class="member-info">
+                  <span class="label" dir="ltr" lang="en">PROSTHODONTICS</span>
+                  <h3>أخصائي التيجان والتركيبات</h3>
+                  <p>تصميم التيجان والجسور والفينير بدقّة لتطابق لون وشكل أسنانك.</p>
+                </div>
+              </div>
+            </article>
+            <article class="member" tabindex="0" aria-label="مساعدة التقويم والمتابعة">
+              <div class="member-card">
+                <img src="image/team/ortho.jpg" alt="مساعدة التقويم" width="1000" height="1300" loading="lazy" decoding="async" draggable="false">
+                <p class="member-role" aria-hidden="true">التقويم</p>
+                <div class="member-info">
+                  <span class="label" dir="ltr" lang="en">ORTHODONTICS</span>
+                  <h3>مساعدة التقويم والمتابعة</h3>
+                  <p>تتابع مراحل التقويم والمصفّفات الشفافة وتنظّم مواعيد المراجعة.</p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+        <div class="team-controls">
+          <button class="round" type="button" data-team-prev aria-label="العضو السابق">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
+          </button>
+          <p class="team-count" dir="ltr"><span data-team-index>05</span> / <span data-team-total>09</span></p>
+          <button class="round" type="button" data-team-next aria-label="العضو التالي">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>
+          </button>
+        </div>
+        <p class="sr-only" aria-live="polite" data-team-live></p>
+        <p class="team-note">صور الفريق توضيحية — تُستبدل بصور فريق العيادة الحقيقي.</p>
+      </div>
+    </section>
+
+    <!-- ============ CLINIC FILM ============ -->
+    <section class="section tour" id="tour" aria-labelledby="tour-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow"><span class="label" dir="ltr" lang="en">04 — CLINIC FILM</span></p>
+          <h2 id="tour-title" class="section-title" data-lines>جولة داخل <em>العيادة.</em></h2>
+        </header>
+        <div class="screen reveal">
+      <div class="hero-film" aria-hidden="true">
+        <div class="film-media">
+          <video class="film-video" muted playsinline loop preload="none" poster="image/stock/building.jpg" data-src="video/clinic-building.mp4"></video>
+          <div class="film-scenes">
+            <figure class="scene scene-crop" data-label="معايير عالمية" data-code="SC.01"><img src="image/stock/building.jpg" alt="" width="1800" height="1200" fetchpriority="high" style="--pos: 30% 30%"></figure>
+            <figure class="scene" data-label="غرفة العلاج" data-code="SC.02"><img src="image/stock/office.jpg" alt="" width="1800" height="1203" style="--pos: 50% 50%"></figure>
+            <figure class="scene" data-label="الاستشارة" data-code="SC.03"><img src="image/stock/consult.jpg" alt="" width="1800" height="1350" style="--pos: 50% 40%"></figure>
+            <figure class="scene" data-label="الدقّة" data-code="SC.04"><img src="image/stock/procedure.jpg" alt="" width="1800" height="2700" style="--pos: 50% 30%"></figure>
+            <figure class="scene" data-label="الطبيب" data-code="SC.05"><img src="image/طبيب.jpg" alt="" width="736" height="694" style="--pos: 70% 35%"></figure>
+            <figure class="scene" data-label="النتيجة" data-code="SC.06"><img src="image/stock/portrait-smile.jpg" alt="" width="1800" height="1200" style="--pos: 60% 45%"></figure>
+          </div>
+        </div>
+        <div class="film-grade"></div>
+      </div>
+
+      <div class="hero-fx" aria-hidden="true">
+        <div class="spot"></div>
+        <div class="letterbox letterbox-top"></div>
+        <div class="letterbox letterbox-bottom"></div>
+      </div>
+
+      <div class="film-ui">
+        <span class="label rec" dir="ltr" lang="en" aria-hidden="true"><i></i>REC <span data-timecode>00:00:00:00</span></span>
+        <div class="film-bar">
+          <button class="film-toggle" type="button" aria-pressed="false" aria-label="إيقاف الفيديو مؤقتاً">
+            <svg class="i-pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5v14M15 5v14"/></svg>
+            <svg class="i-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+          </button>
+          <div class="film-track" aria-hidden="true">
+            <p class="film-scene-label"><span class="label" data-scene-code dir="ltr" lang="en">SC.01</span><span data-scene-label>معايير عالمية</span></p>
+            <div class="film-progress"></div>
+          </div>
+        </div>
+      </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CLINIC GALLERY ============ -->
+    <section class="section" id="clinic" aria-labelledby="clinic-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow"><span class="label" dir="ltr" lang="en">05 — THE SPACE</span></p>
+          <h2 id="clinic-title" class="section-title" data-lines>مساحة صُمّمت <em>لراحتك.</em></h2>
+        </header>
+        <div class="bento">
+          <figure class="tile t-a reveal"><img src="image/عيادة داخلية.jpg" alt="غرفة العلاج في العيادة" width="1200" height="1800" loading="lazy" decoding="async"><figcaption><span class="label" dir="ltr" lang="en">01</span>غرفة العلاج</figcaption></figure>
+          <figure class="tile t-b reveal"><img src="image/stock/room-art.jpg" alt="كرسي أسنان حديث" width="1800" height="1200" loading="lazy" decoding="async"><figcaption><span class="label" dir="ltr" lang="en">02</span>تجهيزات حديثة</figcaption></figure>
+          <figure class="tile t-c reveal"><img src="image/معدات.jpg" alt="أدوات ومواد طبية معقّمة" width="900" height="1200" loading="lazy" decoding="async"><figcaption><span class="label" dir="ltr" lang="en">03</span>المواد</figcaption></figure>
+          <figure class="tile t-d reveal"><img src="image/stock/waiting.jpg" alt="غرفة انتظار هادئة" width="1800" height="2106" loading="lazy" decoding="async"><figcaption><span class="label" dir="ltr" lang="en">04</span>الاستقبال</figcaption></figure>
+          <figure class="tile t-e reveal"><img src="image/stock/tools.jpg" alt="أدوات فحص الأسنان" width="1800" height="2700" loading="lazy" decoding="async"><figcaption><span class="label" dir="ltr" lang="en">05</span>التعقيم</figcaption></figure>
+          <figure class="tile t-f reveal"><img src="image/stock/chair-orange.jpg" alt="عيادة أسنان مجهّزة" width="1800" height="1200" loading="lazy" decoding="async"><figcaption><span class="label" dir="ltr" lang="en">06</span>بيئة مريحة</figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROCESS ============ -->
+    <section class="section" id="process" aria-labelledby="process-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow"><span class="label" dir="ltr" lang="en">06 — THE JOURNEY</span></p>
+          <h2 id="process-title" class="section-title" data-lines>من الزيارة الأولى <em>إلى الابتسامة.</em></h2>
+        </header>
+        <ol class="steps">
+          <li class="step reveal"><span class="step-num" dir="ltr">01</span><h3>استشارة وفحص</h3><p>نستمع إليك، نفحص الفم ونلتقط الأشعة اللازمة.</p></li>
+          <li class="step reveal"><span class="step-num" dir="ltr">02</span><h3>خطة واضحة</h3><p>خطة علاج مكتوبة بالمراحل والتكلفة قبل أي إجراء.</p></li>
+          <li class="step reveal"><span class="step-num" dir="ltr">03</span><h3>العلاج</h3><p>جلسات مريحة بتخدير موضعي وتقنيات حديثة.</p></li>
+          <li class="step reveal"><span class="step-num" dir="ltr">04</span><h3>المتابعة</h3><p>مواعيد مراجعة ونصائح عناية لنتائج تدوم.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ FAQ ============ -->
+    <section class="section" id="faq" aria-labelledby="faq-title">
+      <div class="container faq">
+        <header class="section-head reveal">
+          <p class="eyebrow"><span class="label" dir="ltr" lang="en">07 — FAQ</span></p>
+          <h2 id="faq-title" class="section-title" data-lines>أسئلة <em>شائعة.</em></h2>
+          <p class="lead">لم تجد إجابتك؟ راسلنا على واتساب وسنردّ عليك.</p>
+        </header>
+        <div class="faq-list reveal">
+          <details>
+            <summary>هل زراعة الأسنان مؤلمة؟</summary>
+            <p>تُجرى الزراعة تحت تخدير موضعي، فلا يشعر المريض بألم أثناء العملية. قد يظهر انزعاج خفيف لأيام قليلة بعدها، يُعالج بمسكّنات بسيطة.</p>
+          </details>
+          <details>
+            <summary>كم تستغرق هوليوود سمايل؟</summary>
+            <p>عادةً من جلستين إلى ثلاث جلسات: تصميم وتحضير، ثم تركيب القشور النهائية. يحدّد الطبيب المدة بدقّة بعد الفحص.</p>
+          </details>
+          <details>
+            <summary>هل يمكن معرفة التكلفة قبل البدء؟</summary>
+            <p>نعم. بعد الفحص تحصل على خطة علاج مكتوبة توضّح المراحل والتكلفة، ولا يبدأ أي إجراء قبل موافقتك.</p>
+          </details>
+          <details>
+            <summary>من أي عمر يمكن إحضار الأطفال؟</summary>
+            <p>ننصح بأول زيارة عند ظهور الأسنان الأولى أو قبل سنّ الثالثة، للفحص والوقاية وتعويد الطفل على العيادة.</p>
+          </details>
+          <details>
+            <summary>ماذا أفعل في حالة طارئة؟</summary>
+            <p>اتصل بنا مباشرة على <a href="tel:+213555012345" dir="ltr">0555 01 23 45</a> وسنخصّص لك أقرب موعد ممكن.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ BOOKING ============ -->
+    <section class="section" id="book" aria-labelledby="book-title">
+      <div class="container book">
+        <header class="section-head reveal">
+          <p class="eyebrow"><span class="label" dir="ltr" lang="en">08 — BOOKING</span></p>
+          <h2 id="book-title" class="section-title" data-lines>احجز <em>موعدك.</em></h2>
+          <p class="lead">املأ البيانات وسيُفتح واتساب برسالة جاهزة، أو اتصل بنا مباشرة.</p>
+          <ul class="contact-list">
+            <li><span class="label" dir="ltr" lang="en">PHONE</span><a href="tel:+213555012345" dir="ltr">0555 01 23 45</a></li>
+            <li><span class="label" dir="ltr" lang="en">ADDRESS</span>حي بن عكنون، الجزائر العاصمة (بالقرب من ساحة بن عكنون)</li>
+          </ul>
+        </header>
+
+        <form class="card book-card reveal" id="book-form" novalidate>
+          <div class="field">
+            <label for="f-name">الاسم الكامل</label>
+            <input id="f-name" name="name" type="text" autocomplete="name" required>
+          </div>
+          <div class="field">
+            <label for="f-tel">رقم الهاتف</label>
+            <input id="f-tel" name="tel" type="tel" inputmode="tel" autocomplete="tel" dir="ltr" required>
+          </div>
+          <div class="field field-full">
+            <label for="f-service">الخدمة</label>
+            <select id="f-service" name="service">
+              <option>استشارة عامة</option>
+              <option>زراعة الأسنان</option>
+              <option>هوليوود سمايل</option>
+              <option>التقويم</option>
+              <option>التيجان والتركيبات</option>
+              <option>تبييض الأسنان</option>
+              <option>جراحة الفم والفكين</option>
+              <option>علاج العصب</option>
+              <option>طب أسنان الأطفال</option>
+            </select>
+          </div>
+          <fieldset class="field field-full">
+            <legend>اليوم</legend>
+            <div class="chips chips-days" role="radiogroup" aria-label="اختر اليوم" data-dates="form" data-days="6"></div>
+          </fieldset>
+          <fieldset class="field field-full">
+            <legend>الوقت المفضّل</legend>
+            <div class="chips chips-times" role="radiogroup" aria-label="اختر الوقت" data-times></div>
+          </fieldset>
+          <div class="field field-full">
+            <button type="submit" class="pill-cta pill-cta-wide"><span>تأكيد الحجز عبر واتساب</span><i aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M19 12H5m6-6-6 6 6 6"/></svg></i></button>
+            <p class="form-status" role="status" aria-live="polite"></p>
+          </div>
+        </form>
+      </div>
+
+      <div class="container">
+        <div class="map reveal" id="map">
+          <iframe title="موقع العيادة على الخريطة — بن عكنون" src="https://maps.google.com/maps?q=Ben%20Aknoun%2C%20Alger&z=15&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Floating WhatsApp (desktop) + booking bar (mobile) -->
+  <a class="talk" href="https://wa.me/213555012345" target="_blank" rel="noopener">
+    <span class="talk-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/></svg></span>لنتحدث
+  </a>
+  <div class="mobile-cta" aria-hidden="true">
+    <a href="#book" class="pill-cta" tabindex="-1"><span>احجز موعدك</span><i aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M19 12H5m6-6-6 6 6 6"/></svg></i></a>
+    <a href="tel:+213555012345" class="round" tabindex="-1" aria-label="اتصل بالعيادة">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>
+    </a>
+  </div>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <a href="#top" class="brand">
+          <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M9 5h11a7 7 0 0 1 7 7v15H16a7 7 0 0 1-7-7z"/></svg></span>
+          <span class="brand-word" dir="ltr" lang="en">YAHIA</span>
         </a>
-        <div class="hidden md:flex items-center gap-8">
-          <a href="#" class="text-slate-600 hover:text-blue-600 font-bold transition-colors">الرئيسية</a>
-          <a href="#about" class="text-slate-600 hover:text-blue-600 font-bold transition-colors">عن العيادة</a>
-          <a href="#book" class="bg-blue-600 text-white px-8 py-2.5 rounded-full hover:bg-blue-700 transition-all shadow-lg shadow-blue-200 font-bold">احجز موعدك</a>
-        </div>
+        <p class="footer-text">عيادة الدكتور يحيى بن عيسى لطب وجراحة الأسنان. التميّز في الرعاية في قلب بن عكنون، الجزائر العاصمة.</p>
+      </div>
+      <div>
+        <h3 class="label" dir="ltr" lang="en">INDEX</h3>
+        <ul>
+          <li><a href="#services">الخدمات</a></li>
+          <li><a href="#doctor">الطبيب</a></li>
+          <li><a href="#clinic">العيادة</a></li>
+          <li><a href="#book">حجز موعد</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="label" dir="ltr" lang="en">CONTACT</h3>
+        <ul>
+          <li>حي بن عكنون، الجزائر العاصمة</li>
+          <li><a href="tel:+213555012345" dir="ltr">0555 01 23 45</a> <span class="urgent">طوارئ</span></li>
+        </ul>
       </div>
     </div>
-  </nav>
-
-  <!-- Hero -->
-  <section class="relative overflow-hidden bg-slate-50 min-h-[90vh] flex items-center pt-20">
-    <div class="absolute top-0 right-0 -mr-20 -mt-20 w-[600px] h-[600px] bg-blue-100/40 rounded-full blur-3xl animate-pulse"></div>
-    <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-[500px] h-[500px] bg-emerald-100/40 rounded-full blur-3xl"></div>
-    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-24 grid lg:grid-cols-2 gap-12 items-center">
-      <div class="space-y-8">
-        <div class="relative">
-          <span class="inline-block px-4 py-2 rounded-full bg-blue-100 text-blue-700 text-sm font-extrabold mb-4 shadow-sm">✨ العيادة المرجعية في بن عكنون</span>
-          <h1 class="text-6xl lg:text-8xl font-serif font-black text-slate-900 leading-[1.1]">
-            ابتسامة <br />
-            <span class="text-transparent bg-clip-text bg-gradient-to-l from-blue-600 to-emerald-500">تغير حياتك.</span>
-          </h1>
-          <p class="mt-6 text-xl text-slate-600 max-w-lg leading-relaxed font-medium">
-            مرحباً بكم في عيادة الدكتور يحيى. نقدم لكم رعاية استثنائية وجراحة أسنان متقدمة في قلب الجزائر العاصمة.
-          </p>
-        </div>
-        <div class="flex flex-col sm:flex-row gap-5">
-          <a href="#book" class="px-10 py-5 bg-blue-600 text-white rounded-2xl font-black text-xl hover:bg-blue-700 transition-all shadow-2xl shadow-blue-200 text-center transform hover:scale-105 active:scale-95">احجز موعدك الآن</a>
-          <a href="#about" class="px-10 py-5 bg-white text-slate-900 border-2 border-slate-200 rounded-2xl font-black text-xl hover:bg-slate-50 transition-all text-center">تعرف علينا</a>
-        </div>
-        <div class="flex items-center gap-10 pt-6">
-          <div class="text-center group">
-            <div class="text-4xl font-black text-blue-600">+12</div>
-            <div class="text-sm font-bold text-slate-500 uppercase tracking-tighter">سنة خبرة</div>
-          </div>
-          <div class="w-px h-12 bg-slate-200"></div>
-          <div class="text-center group">
-            <div class="text-4xl font-black text-blue-600">100%</div>
-            <div class="text-sm font-bold text-slate-500 uppercase tracking-tighter">نجاح العمليات</div>
-          </div>
-          <div class="w-px h-12 bg-slate-200"></div>
-          <div class="text-center group">
-            <div class="text-4xl font-black text-blue-600">5.0</div>
-            <div class="text-sm font-bold text-slate-500 uppercase tracking-tighter">تقييم ممتاز</div>
-          </div>
-        </div>
-      </div>
-      <div class="relative">
-        <img src="image/طبيب.jpg" alt="دكتور يحيى بن عيسى - طبيب أسنان جزائري" class="w-full h-auto object-cover rounded-[4rem] shadow-[0_50px_100px_-20px_rgba(0,0,0,0.25)]">
-        <div class="absolute inset-0 bg-gradient-to-t from-blue-900/80 via-transparent to-transparent flex flex-col justify-end p-10 text-white">
-          <p class="text-2xl font-black mb-1">د. يحيى بن عيسى</p>
-          <div class="flex items-center gap-2">
-            <span class="w-3 h-3 bg-emerald-400 rounded-full animate-pulse"></span>
-            <p class="text-sm font-bold text-blue-100">متاح لاستقبال الحالات الآن</p>
-          </div>
-        </div>
-        <div class="absolute -bottom-10 -right-10 bg-white p-6 rounded-[2rem] shadow-2xl z-20 flex items-center gap-4 border border-slate-50 animate-float">
-          <div class="w-16 h-16 bg-blue-600 rounded-2xl flex items-center justify-center shadow-lg shadow-blue-200">
-            <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04M12 21.355r7.143-3.141c.44-.194.857-.857.857-1.355V7.124a11.955 11.955 0 01-7.143-2.141c-.44.194-.857.857-.857 1.355v9.735c0 .498.417 1.161.857 1.355L12 21.355z"/></svg>
-          </div>
-          <div>
-            <p class="text-xs font-black text-slate-400 uppercase">الضمان الطبي</p>
-            <p class="text-lg font-black text-slate-900">أحدث التقنيات 2024</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Gallery -->
-  <section class="py-24 bg-slate-50" id="gallery">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-16">
-        <h2 class="text-blue-600 font-bold tracking-wide uppercase">صور العيادة</h2>
-        <p class="mt-2 text-3xl leading-8 font-serif font-bold tracking-tight text-slate-900 sm:text-4xl">لمحة عن أجواء العيادة</p>
-      </div>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-        <!-- ضع هنا مسار الصورة المحلية الموجودة على جهازك -->
-        <img src="image/عيادة داخلية.jpg" alt="عيادة داخلية" class="w-full h-64 object-cover rounded-3xl shadow-lg">
-        <!-- استبدل بدالة اسم ملف الصورة الأولى من مكتبتك -->
-        <img src="image/معدات.jpg" alt="معدات طبية" class="w-full h-64 object-cover rounded-3xl shadow-lg">
-        <!-- والصورة الثالثة -->
-        <img src="image/طبيب.jpg" alt="طبيب مع مريض" class="w-full h-64 object-cover rounded-3xl shadow-lg">
-      </div>
-    </div>
-  </section>
-
-  <!-- Services -->
-  <section class="py-24 bg-white" id="services">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-16">
-        <h2 class="text-blue-600 font-bold tracking-wide uppercase">خدماتنا المتميزة</h2>
-        <p class="mt-2 text-3xl leading-8 font-serif font-bold tracking-tight text-slate-900 sm:text-4xl">رعاية شاملة لابتسامة مثالية</p>
-        <p class="mt-4 max-w-2xl text-xl text-slate-500 lg:mx-auto">نستخدم أحدث التقنيات العالمية في جراحة وزراعة الأسنان لضمان أفضل النتائج لمرضانا في بن عكنون.</p>
-      </div>
-      <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
-        <div class="relative group p-8 bg-slate-50 rounded-3xl border border-slate-100 transition-all hover:shadow-2xl hover:-translate-y-2">
-          <img src="image/زراعة.jpg" alt="زرع أسنان" class="absolute -top-4 right-8 h-14 w-14 rounded-2xl object-cover shadow-lg group-hover:scale-110 transition-transform">
-          <h3 class="mt-6 text-xl font-bold text-slate-900">زراعة الأسنان</h3>
-          <p class="mt-2 text-slate-600 leading-relaxed">تعويض الأسنان المفقودة بأحدث التقنيات الألمانية وبنتائج تدوم طويلاً.</p>
-        </div>
-        <div class="relative group p-8 bg-slate-50 rounded-3xl border border-slate-100 transition-all hover:shadow-2xl hover:-translate-y-2">
-          <img src="image/الفكين.jpg" alt="جراحة الفم والفكين" class="absolute -top-4 right-8 h-14 w-14 rounded-2xl object-cover shadow-lg group-hover:scale-110 transition-transform">
-          <h3 class="mt-6 text-xl font-bold text-slate-900">جراحة الفم والفكين</h3>
-          <p class="mt-2 text-slate-600 leading-relaxed">عمليات دقيقة لعلاج مشاكل الفكين والأسنان المنطمرة باحترافية عالية.</p>
-        </div>
-        <div class="relative group p-8 bg-slate-50 rounded-3xl border border-slate-100 transition-all hover:shadow-2xl hover:-translate-y-2">
-          <img src=" alt="هوليوود سمايل" class="absolute -top-4 right-8 h-14 w-14 rounded-2xl object-cover shadow-lg group-hover:scale-110 transition-transform">
-          <h3 class="mt-6 text-xl font-bold text-slate-900">هوليوود سمايل</h3>
-          <p class="mt-2 text-slate-600 leading-relaxed">تصميم ابتسامة رقمية تتناسب مع ملامح وجهك لتعطيك الثقة الكاملة.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- About -->
-  <section class="py-24 bg-white overflow-hidden" id="about">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid lg:grid-cols-2 gap-16 items-center">
-        <div class="relative">
-          <div class="absolute -top-10 -right-10 w-64 h-64 bg-blue-50 rounded-full blur-3xl opacity-50"></div>
-          <img src="image/طبيب.jpg" alt="الدكتور يحيى - جراح أسنان بالجزائر" class="relative z-10 w-full rounded-[3rem] shadow-2xl transform hover:scale-[1.02] transition-transform duration-500 border-4 border-slate-50 object-cover">
-        </div>
-        <div class="space-y-8">
-          <div>
-            <h2 class="text-blue-600 font-bold tracking-wide uppercase">أخصائي جراحة الفم</h2>
-            <p class="mt-2 text-4xl leading-10 font-serif font-bold text-slate-900">الدكتور يحيى بن عيسى</p>
-          </div>
-          <p class="text-xl text-slate-600 leading-relaxed">بخبرة تمتد لأكثر من 12 عاماً في أرقى العيادات والمستشفيات، يكرس الدكتور يحيى جهوده لتقديم أحدث ما توصل إليه علم طب وجراحة الأسنان لمرضاه في حي بن عكنون. نؤمن بأن كل مريض يستحق ابتسامة تعكس ثقته بنفسه.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Booking simple note -->
-  <section id="book" class="py-24 bg-slate-50 min-h-screen">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="bg-white rounded-[3.5rem] shadow-[0_50px_100px_-20px_rgba(59,130,246,0.15)] overflow-hidden border border-slate-100">
-        <div class="bg-gradient-to-br from-blue-600 to-blue-900 px-8 py-12 text-white text-center">
-          <h2 class="text-4xl font-serif font-black">نظام الحجز</h2>
-          <p class="mt-3 text-blue-100 font-medium">لحجز موعد، يرجى الاتصال على 0555 01 23 45 أو زيارة العيادة مباشرة.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="bg-slate-900 text-white pt-20 pb-10">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid md:grid-cols-3 gap-12 mb-16">
-        <div class="space-y-6">
-          <div class="flex items-center gap-2">
-            <div class="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center text-xl font-bold">ي</div>
-            <span class="text-2xl font-bold font-serif">عيادة د. يحيى</span>
-          </div>
-          <p class="text-slate-400 leading-relaxed">التميز في طب الأسنان في قلب بن عكنون. نلتزم بتقديم أرقى مستويات الرعاية الصحية لمرضانا في الجزائر.</p>
-        </div>
-        <div>
-          <h4 class="font-bold mb-6 text-blue-400">روابط سريعة</h4>
-          <ul class="space-y-4 text-slate-400">
-            <li><a href="#" class="hover:text-white transition-colors">الرئيسية</a></li>
-            <li><a href="#about" class="hover:text-white transition-colors">عن الدكتور</a></li>
-            <li><a href="#book" class="hover:text-white transition-colors">حجز موعد</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4 class="font-bold mb-6 text-blue-400">اتصل بنا</h4>
-          <ul class="space-y-4 text-slate-400">
-            <li>📍 حي بن عكنون، الجزائر العاصمة (بالقرب من ساحة بن عكنون)</li>
-            <li>☎️ <span class="font-bold">0555 01 23 45</span> <span class="text-red-400 font-bold">(طوارئ)</span></li>
-          </ul>
-        </div>
-      </div>
-      <div class="border-t border-slate-800 pt-8 text-center text-slate-500 text-sm">
-        <p>© 2024 عيادة الدكتور يحيى لطب الأسنان - بن عكنون. جميع الحقوق محفوظة.</p>
-      </div>
+    <div class="container footer-bottom">
+      <p>© <span data-year>2026</span> عيادة الدكتور يحيى لطب الأسنان — بن عكنون. جميع الحقوق محفوظة. الصور التوضيحية من Unsplash.</p>
+      <p class="footer-mega" dir="ltr" lang="en" aria-hidden="true">YAHIA</p>
     </div>
   </footer>
 
-</body>
-</html>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js" defer></script>
+  <script src="main.js" defer></script>
 </body>
 </html>
